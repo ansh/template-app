@@ -1,23 +1,71 @@
 {
   "name": "template-app",
   "version": "1.0.0",
+  "private": true,
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "prebuild": "expo prebuild --clean",
+    "prebuild:fast": "expo prebuild",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {
-    "expo": "~52.0.37",
-    "expo-status-bar": "~2.0.1",
+    "@react-native-async-storage/async-storage": "1.23.1",
+    "@react-native-community/datetimepicker": "8.2.0",
+    "@react-native-community/netinfo": "11.4.1",
+    "@react-native-community/slider": "4.5.5",
+    "@react-native-masked-view/masked-view": "0.3.2",
+    "@react-native-picker/picker": "2.11.0",
+    "@react-native-segmented-control/segmented-control": "2.5.4",
+    "@react-navigation/bottom-tabs": "^7.2.0",
+    "@react-navigation/native": "^7.0.14",
+    "@react-navigation/stack": "^7.1.1",
+    "@shopify/flash-list": "1.7.3",
+    "expo": "~52.0.0",
+    "expo-background-fetch": "~13.0.0",
+    "expo-build-properties": "~0.13.0",
+    "expo-camera": "~16.0.0",
+    "expo-constants": "~17.0.0",
+    "expo-dev-client": "~5.0.0",
+    "expo-image": "~2.0.0",
+    "expo-insights": "~0.8.0",
+    "expo-network": "~7.0.0",
+    "expo-network-addons": "~0.7.0",
+    "expo-notifications": "~0.29.0",
+    "expo-splash-screen": "~0.29.0",
+    "expo-status-bar": "~2.0.0",
+    "expo-system-ui": "~4.0.0",
+    "expo-video": "~2.0.0",
+    "lottie-react-native": "7.2.1",
     "react": "18.3.1",
-    "react-native": "0.76.7"
+    "react-native": "0.77.0",
+    "react-native-gesture-handler": "~2.22.0",
+    "react-native-pager-view": "6.5.1",
+    "react-native-reanimated": "~3.16.7",
+    "react-native-safe-area-context": "5.1.0",
+    "react-native-screens": "~4.5.0",
+    "react-native-svg": "15.11.1",
+    "react-native-view-shot": "4.0.2",
+    "react-native-webview": "13.13.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~18.3.12",
+    "babel-plugin-module-resolver": "^5.0.2",
     "typescript": "^5.3.3"
   },
-  "private": true
+  "expo": {
+    "install": {
+      "exclude": [
+        "react-native@~0.76.6",
+        "react-native-reanimated@~3.16.1",
+        "react-native-gesture-handler@~2.20.0",
+        "react-native-screens@~4.4.0",
+        "react-native-safe-area-context@~4.12.0",
+        "react-native-webview@~13.12.5"
+      ]
+    }
+  }
 }
