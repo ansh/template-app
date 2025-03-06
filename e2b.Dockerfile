@@ -12,10 +12,11 @@ RUN npx create-expo-app@latest --template blank-typescript .
 
 COPY package.json /home/user/expo-app/package.json
 COPY bun.lock /home/user/expo-app/bun.lock
+COPY package-lock.json /home/user/expo-app/package-lock.json
 COPY app.json /home/user/expo-app/app.json
 
 # Install dependencies
-RUN npm install
+RUN npm ci
 
 # Install @expo/ngrok globally for tunneling
 RUN npm install -g @expo/ngrok@^4.1.0
